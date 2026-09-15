@@ -1,3 +1,4 @@
+import os
 # app.py
 
 import os
@@ -145,7 +146,7 @@ def main():
                      outputs=[mark_, chatbot, system_state, system_input, textbox])
     
     demo.queue(api_open=False, default_concurrency_limit=40)
-    demo.launch(max_threads=5)
+    demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 10000)), max_threads=5)
 
 
 if __name__ == "__main__":
