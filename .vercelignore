@@ -1,0 +1,7 @@
+*.pdf
+qwencoder-eval/
+finetuning/
+examples/
+assets/
+.git/
+.venv/
