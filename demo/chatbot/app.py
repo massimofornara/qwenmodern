@@ -9,6 +9,8 @@ os.system('pip install dashscope')
 import gradio as gr
 from http import HTTPStatus
 import dashscope
+dashscope.api_key = os.environ.get("DASHSCOPE_API_KEY")
+dashscope.base_http_api_url = os.environ.get("DASHSCOPE_HTTP_BASE_URL")
 dashscope.base_http_api_url = os.environ.get("DASHSCOPE_HTTP_BASE_URL", "https://ws-9epwqw7luompy0r5.us-east-1.maas.aliyuncs.com/api/v1")
 from dashscope import Generation
 from dashscope.api_entities.dashscope_response import Role
